@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 module.exports = {
   dialect: 'postgres',
   host: 'localhost',
@@ -7,7 +6,7 @@ module.exports = {
   database: 'gobarber',
   define: {
     timestamps: true,
-    undercored: true,
+    underscored: true,
     underscoredAll: true,
   },
 };
