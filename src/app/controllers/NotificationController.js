@@ -22,6 +22,7 @@ class NotificationController {
     return res.json(notifications);
   }
 
+  // update notifications functionio --mongodb
   async update(req, res) {
     const notification = await Notification.findByIdAndUpdate(
       req.params.id,
