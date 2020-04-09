@@ -16,7 +16,6 @@ class Database {
     this.mongo();
   }
 
-  // connect database funcions
   init() {
     this.connection = new Sequelize(databaseConfig);
 
