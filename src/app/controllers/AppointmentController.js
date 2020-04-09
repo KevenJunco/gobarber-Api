@@ -12,13 +12,13 @@ class AppointmentController {
       where: { user_id: req.userId, canceled_at: null },
       order: ['date'],
       attributes: ['id', 'date'],
+      limit: 20,
+      offset: (page - 1) * 20,
       include: [
         {
           model: User,
           as: 'provider',
           attributes: ['id', 'name'],
-          limit: 20,
-          offset: (page - 1) * 20,
           include: [
             {
               model: File,
@@ -81,6 +81,10 @@ class AppointmentController {
     });
 
     return res.json(appointment);
+  }
+
+  async delete(req, res) {
+    return res.json();
   }
 }
 
